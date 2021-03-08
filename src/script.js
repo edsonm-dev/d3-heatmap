@@ -2,7 +2,7 @@ let padding = 100;
 let width=1020;
 let height=400;
 let dataset
-//let parseDate = d3.time.format("%Y-%m").parse;
+
 fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json')
   .then(response=>response.json())
   .then(data=>{
@@ -12,7 +12,7 @@ fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     let variance=data.monthlyVariance.map((x)=>x.variance)
     let baseTemp=data.baseTemperature;
     
-    //console.log(variance);
+  
 
     let svg=d3.select("#chart1")
               .append("svg")
@@ -36,7 +36,7 @@ fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     let yScale = d3.scaleBand()
                 .domain(months)
                 .range([0,height])
-                //.padding(0.01)
+                
                 
     
     let yAxis=d3.axisLeft(yScale) 
@@ -51,9 +51,7 @@ fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
                   .domain([d3.min(variance), d3.max(variance)])
                   .range(d3.quantize(d3.interpolateHcl( "#362142","#f4e153"), 10))
 
-/*     colorScale.range().forEach(function(d){
-                   // console.log(colorScale.invertExtent(d))
-                  }) */
+
 
  //tooltip  
       let tooltip= d3.select("#chart1")

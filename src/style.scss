@@ -9,16 +9,28 @@ html,body{
     font-size: 10px;
     font-family:  Helvetica, sans-serif;
 }
+#appContainer{
+    background:#343a40;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    
+    
+    }
 
 
+
+//Chart
 h1 {
     font-size:2.5rem;
 }
-
+svg{
+    background-color: #f2e9e4;    
+}
 .chart{
-
-   
-    
+    //smooth box shadow
     box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -42,6 +54,9 @@ h1 {
         
     
 }}
+
+
+//tooltip
 .d3-tip {
     
     line-height: 1;
@@ -53,11 +68,6 @@ h1 {
     position:absolute;
 
   }
-svg{
-    background-color: #f2e9e4;
-    
-    
-}
 
 #title{
 
@@ -68,16 +78,8 @@ svg{
     font-size: 1.2rem;
     font-weight: 400;
 }
-#appContainer{
-background:#343a40;
-height:100%;
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center; 
 
 
-}
 
 
 
